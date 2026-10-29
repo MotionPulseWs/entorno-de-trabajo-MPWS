@@ -1,0 +1,8 @@
+# ===== motionpulse.xyz — no indexar en buscadores =====
+# Envía la cabecera X-Robots-Tag en TODAS las respuestas (HTML, PDF, imágenes).
+# Si las carpetas de los subdominios están dentro de este public_html,
+# también la heredan. Si un subdominio tiene su propio .htaccess
+# (ej. WordPress), agrega este mismo bloque al inicio de ese archivo.
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+</IfModule>
